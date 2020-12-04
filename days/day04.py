@@ -1,6 +1,6 @@
 import re
 
-passports = open('days/day4_input.txt', "r").read().split('\n\n')
+passports = open('days/day04_input.txt', "r").read().split('\n\n')
 
 print('~~~~~~~~~~~~~~~~~~~~~~~~~ Day 4 ~~~~~~~~~~~~~~~~~~~~~~~~~')
 valid = 0

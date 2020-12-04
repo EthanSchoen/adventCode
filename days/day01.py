@@ -1,4 +1,4 @@
-numbers = open('days/day1_input.txt', "r").read().split('\n')
+numbers = open('days/day01_input.txt', "r").read().split('\n')
 numbers = list(map(int, numbers))
 
 print('~~~~~~~~~~~~~~~~~~~~~~~~~ Day 1 ~~~~~~~~~~~~~~~~~~~~~~~~~')

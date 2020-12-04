@@ -1,6 +1,6 @@
 import re
 
-lines = open('days/day2_input.txt', "r").read().split('\n')
+lines = open('days/day02_input.txt', "r").read().split('\n')
 
 print('~~~~~~~~~~~~~~~~~~~~~~~~~ Day 2 ~~~~~~~~~~~~~~~~~~~~~~~~~')
 

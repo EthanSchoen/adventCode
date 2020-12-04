@@ -1,4 +1,4 @@
-lines = open('days/day3_input.txt', "r").read().split('\n')
+lines = open('days/day03_input.txt', "r").read().split('\n')
 
 print('~~~~~~~~~~~~~~~~~~~~~~~~~ Day 3 ~~~~~~~~~~~~~~~~~~~~~~~~~')
 
