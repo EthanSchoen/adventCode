@@ -1,5 +1,7 @@
-numbers = open('day1_input.txt', "r").read().split('\n')
+numbers = open('days/day1_input.txt', "r").read().split('\n')
 numbers = list(map(int, numbers))
+
+print('~~~~~~~~~~~~~~~~~~~~~~~~~ Day 1 ~~~~~~~~~~~~~~~~~~~~~~~~~')
 
 # Part 1
 def part1():
@@ -27,5 +29,5 @@ def part2():
             return
 
 part1()
-print()
 part2()
+print()

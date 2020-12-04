@@ -1,6 +1,8 @@
 import re
 
-lines = open('day2_input.txt', "r").read().split('\n')
+lines = open('days/day2_input.txt', "r").read().split('\n')
+
+print('~~~~~~~~~~~~~~~~~~~~~~~~~ Day 2 ~~~~~~~~~~~~~~~~~~~~~~~~~')
 
 valid = 0
 for line in lines:
@@ -22,3 +24,5 @@ for line in lines:
     valid = valid + 1
 
 print('Second policy number valid: ', valid)
+
+print()

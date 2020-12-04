@@ -1,13 +1,12 @@
 import re
 
-passports = open('temp_day4_input.txt', "r").read().split('\n\n')
-# passports = open('test.txt', "r").read().split('\n\n')
+passports = open('days/day4_input.txt', "r").read().split('\n\n')
 
+print('~~~~~~~~~~~~~~~~~~~~~~~~~ Day 4 ~~~~~~~~~~~~~~~~~~~~~~~~~')
 valid = 0
 for p in passports:
   fields = re.split('[ \n]', p)
   required = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid']
-  # , 'cid']
   for f in fields:
     if required.count(f[:3]) > 0:
       required.remove(f[:3])
@@ -61,7 +60,4 @@ for p in passports:
     valid = valid + 1
 
 print('part 2: ', valid)
-
-
-if 1920 <= 200 <= 2002:
-  print(True)
+print()
