@@ -9,6 +9,6 @@ if len(sys.argv) == 1:
 else:
   for a in sys.argv[1:]:
     if int(a) < 10:
-      __import__('days.day0'+str(a))
+      __import__('days.day0'+a)
     else:
-      __import__('days.day'+str(a))
+      __import__('days.day'+a)
