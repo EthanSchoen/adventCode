@@ -23,18 +23,15 @@ for p in passports:
     if required.count(f[:3]) > 0:
       value = f[4:]
       if f[:3] == 'byr':
-        value = int(value)
-        if 1920 <= value <= 2002:
+        if 1920 <= int(value) <= 2002:
           required.remove(f[:3])
 
       if f[:3] == 'iyr':
-        value = int(value)
-        if 2010 <= value <= 2020:
+        if 2010 <= int(value) <= 2020:
           required.remove(f[:3])
 
       if f[:3] == 'eyr':
-        value = int(value)
-        if 2020 <= value <= 2030:
+        if 2020 <= int(value) <= 2030:
           required.remove(f[:3])
 
       if f[:3] == 'hgt':
@@ -46,7 +43,7 @@ for p in passports:
           required.remove(f[:3])
 
       if f[:3] == 'hcl':
-        if len(value) == 7 and re.match('#[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]', value):
+        if len(value) == 7 and re.match('#[0-9a-f]{6}', value):
           required.remove(f[:3])
 
       if f[:3] == 'ecl':
@@ -54,7 +51,7 @@ for p in passports:
           required.remove(f[:3])
 
       if f[:3] == 'pid':
-        if len(value) == 9 and re.match('[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]', value):
+        if len(value) == 9 and re.match('[0-9]{9}', value):
           required.remove(f[:3])
   if(len(required) == 0):
     valid = valid + 1
