@@ -1,7 +1,7 @@
 import math
 
 lines = open('days/day10_input.txt', "r").read().split('\n')
-lines = open('test.txt', "r").read().split('\n')
+# lines = open('test.txt', "r").read().split('\n')
 print('~~~~~~~~~~~~~~~~~~~~~~~~~ Day 10 ~~~~~~~~~~~~~~~~~~~~~~~~~')
 
 def count_diffs(adapters):
@@ -19,9 +19,9 @@ def count_diffs(adapters):
 def num_arangements(adapters):
   if len(adapters) == 2:
     return 1
-  if len(adapters) == 3:
-    return 2
-  return 2**(len(adapters)-1)
+  if len(adapters) == 5:
+    return 7
+  return 2**(len(adapters)-2)
 
 adapters = [int(l) for l in lines]
 adapters.sort()
@@ -32,9 +32,12 @@ print('Part 1:', res['one']*res['three'])
 adapters.reverse()
 batch = []
 last = adapters[0]
+adapters.append(0)
 configs = 1
 for a in adapters[1:]:
-  if last-a == 3:
+  if last-a == 3 or a == 0:
+    if a == 0:
+      batch.insert(0, a)
     if len(batch) > 1:
       configs = configs * num_arangements(batch)
     batch = [a]
