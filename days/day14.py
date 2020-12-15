@@ -30,7 +30,6 @@ def place_in_mem(mem, add, val):
     mem[str(int(add,2))] = val
     return mem
   return place_in_mem(mem, add[:x]+'0'+add[x+1:], val) | place_in_mem(mem, add[:x]+'1'+add[x+1:], val)
-print('\t(this is going to take a while)')
 mem = {}
 for ins in lines:
   if ins[:4] == 'mask':
