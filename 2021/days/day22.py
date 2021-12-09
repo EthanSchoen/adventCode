@@ -11,6 +11,6 @@ def part1():
 def part2():
   return
 
-print('part1:' + str(part1()))
-print('part2:' + str(part2()))
+print('part1: ' + str(part1()))
+print('part2: ' + str(part2()))
 print()
