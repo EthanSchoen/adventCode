@@ -1,4 +1,3 @@
-
 import sys
 import time
 
@@ -17,4 +16,3 @@ else:
     print('Time:',time.time()-t)
     print()
 print('Total Time:',time.time()-t0)
-

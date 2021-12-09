@@ -4,8 +4,7 @@ from datetime import datetime
 year = str(datetime.now().year)
 Path(year + '/days').mkdir(parents=True, exist_ok=True)
 
-open(year + '/run.py', 'w').write("""
-import sys
+open(year + '/run.py', 'w').write("""import sys
 import time
 
 t0 = time.time()
@@ -23,7 +22,6 @@ else:
     print('Time:',time.time()-t)
     print()
 print('Total Time:',time.time()-t0)
-
 """)
 
 for n in range(1,26):
@@ -45,5 +43,4 @@ def part2():
 part1()
 part2()
 print()
-
 """.format(n, n))
