@@ -48,6 +48,29 @@ def part1():
 
 # Part 2
 def part2():
+  for n in numbers:
+    remove = []
+    for i in range(len(boards)):
+      b = boards[i]
+      for l in b:
+        for c in range(len(l)):
+          if l[c] == n:
+            l[c] = 'x' + l[c]
+      res = checkForWin(b)
+      if (len(res) > 0):
+        if len(boards) == 1:
+          unmarked = []
+          for l in boards[0]:
+            for c in l:
+              if c[0] != 'x':
+                unmarked.append(int(c))
+          return sum(unmarked)*int(n)
+        remove.append(i)
+    if len(remove):
+      offset = 0
+      while len(remove) and len(boards) > 1:
+        del boards[remove.pop(0) - offset]
+        offset += 1
   return
 
 print('part1: ' + str(part1()))
